@@ -15,7 +15,7 @@ See tutorial.ipynb for a minimal example walkthrough
 # Quick start 
 
 ## Install 
-### Install with pip or uv (GPU and OLD instructions)
+### Install with pip or uv (GPU or CPU)
 
 Create and activate venv
 
