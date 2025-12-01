@@ -20,7 +20,7 @@ See tutorial.ipynb for a minimal example walkthrough
 Create and activate venv
 
 ```bash
-python -m venv .venv
+python3.11 -m venv .venv
 
 source .venv/bin/activate
 ```
@@ -58,7 +58,7 @@ pip install torch-cluster --no-build-isolation -f https://data.pyg.org/whl/torch
 
 ```bash
 
-uv venv .venv
+uv venv --python 3.11
 
 source .venv/bin/activate
 
