@@ -11,11 +11,66 @@ AntiDIF is built on top of RL-DIF https://github.com/flagshippioneering/pi-rldif
 
 See tutorial.ipynb for a minimal example walkthrough
 
-------- More detailed install tutorial coming soon -------
 
 # Quick start 
 
 ## Install 
+### Install with pip or uv (GPU or CPU)
+
+Create and activate venv
+
+```bash
+python3.11 -m venv .venv
+
+source .venv/bin/activate
+```
+
+Install requirements, use either requirements_gpu.txt
+for NVidia gpu support or requirements.txt for cpu
+only. e.g. gpu
+
+```bash
+pip install -r requirements_gpu.txt
+```
+
+We then need to install torch-cluster and torch-scatter manually
+unfortunately due to some oddity the env may not work break if we t
+ry to install these packages in the step above.
+
+for GPU
+
+```bash
+pip install torch-scatter --no-build-isolation -f https://data.pyg.org/whl/torch-2.0.0+cu117.html
+
+pip install torch-cluster --no-build-isolation -f https://data.pyg.org/whl/torch-2.0.0+cu117.html
+
+```
+
+for cpu replace with
+
+```bash
+pip install torch-scatter --no-build-isolation -f https://data.pyg.org/whl/torch-2.0.0+cpu.html
+
+pip install torch-cluster --no-build-isolation -f https://data.pyg.org/whl/torch-2.0.0+cpu.html
+```
+
+### uv install
+
+```bash
+
+uv venv --python 3.11
+
+source .venv/bin/activate
+
+uv pip install -r requirements_gpu.txt
+
+uv pip install torch-scatter --no-build-isolation -f https://data.pyg.org/whl/torch-2.0.0+cu117.html
+
+uv pip install torch-cluster --no-build-isolation -f https://data.pyg.org/whl/torch-2.0.0+cu117.html
+```
+
+### Alternative install from RL-DIF
+
 Clone the repo and create an environment (See requirements in RL-DIF, https://github.com/flagshippioneering/pi-rldif)
 
 ## Inference on example data
