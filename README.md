@@ -26,16 +26,15 @@ source .venv/bin/activate
 ```
 
 Install requirements, use either requirements_gpu.txt
-for NVidia gpu support or requirements.txt for cpu
+for NVIDIA gpu support or requirements.txt for cpu
 only. e.g. gpu
 
 ```bash
 pip install -r requirements_gpu.txt
 ```
 
-We then need to install torch-cluster and torch-scatter manually
-unfortunately due to some oddity the env may not work break if we t
-ry to install these packages in the step above.
+We then need to install torch-cluster and torch-scatter manually.
+Unfortunately  the env may not work if we try to install cluster and scatter in the requirements txt files.
 
 for GPU
 
@@ -46,7 +45,7 @@ pip install torch-cluster --no-build-isolation -f https://data.pyg.org/whl/torch
 
 ```
 
-for cpu replace with
+for CPU install replace with
 
 ```bash
 pip install torch-scatter --no-build-isolation -f https://data.pyg.org/whl/torch-2.0.0+cpu.html
