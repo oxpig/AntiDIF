@@ -45,7 +45,7 @@ pip install torch-cluster --no-build-isolation -f https://data.pyg.org/whl/torch
 
 ```
 
-for CPU install replace with
+for CPU install replace the above with the following
 
 ```bash
 pip install torch-scatter --no-build-isolation -f https://data.pyg.org/whl/torch-2.0.0+cpu.html
