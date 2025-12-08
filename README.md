@@ -80,6 +80,8 @@ python -m run.run
 ``` 
 This will run inference for the example antibody 7yxu.pdb
 
+Optionally in the notebooks folder you can also follow the tutorial.ipynb
+
 ## Troubleshooting
 Absolute paths to m_name and example.csv in config.yaml may need to be set. As well as setting the absolute path to 7yxu.pdb in example.csv.
 
