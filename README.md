@@ -6,9 +6,6 @@ From our paper Accurate and Diverse Antibody Specific Inverse Folding with Discr
 
 Paper link: https://www.biorxiv.org/content/10.1101/2025.07.12.664553v1
 
-
-AntiDIF is built on top of RL-DIF https://github.com/flagshippioneering/pi-rldif
-
 See tutorial.ipynb for a minimal example walkthrough
 
 
@@ -70,6 +67,9 @@ uv pip install torch-cluster --no-build-isolation -f https://data.pyg.org/whl/to
 
 ### Alternative install from RL-DIF
 
+
+AntiDIF is built on top of RL-DIF https://github.com/flagshippioneering/pi-rldif. Thus, the install instructions can be followed from RL-DIF instead.
+
 Clone the repo and create an environment (See requirements in RL-DIF, https://github.com/flagshippioneering/pi-rldif)
 
 ## Inference on example data
@@ -81,6 +81,8 @@ python -m run.run
 This will run inference for the example antibody 7yxu.pdb
 
 Optionally in the notebooks folder you can also follow the tutorial.ipynb
+
+The test set for this paper can be found at https://zenodo.org/records/8164693
 
 ## Troubleshooting
 Absolute paths to m_name and example.csv in config.yaml may need to be set. As well as setting the absolute path to 7yxu.pdb in example.csv.
